@@ -3,7 +3,7 @@ from twilio.twiml.messaging_response import MessagingResponse
 
 app  =  FastAPI()
 
-@app.post("/wpp")
+@app.post("/whatsapp")
 async def whatsapp_reply(request: Request):
     form_data = await request.form()
     body = form_data.get("Body", "").strip().lower()
